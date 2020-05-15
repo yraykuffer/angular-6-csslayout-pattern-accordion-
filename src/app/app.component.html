@@ -1,0 +1,70 @@
+<h1>Accordion Demo</h1>
+
+<!-- Container -->
+<div class="accordion">
+
+	<!-- Each accordion item -->
+	<div class="accordion-item">
+		<div class="heading" (click)="togglePanel('panel1')">
+			<div class="icon">
+				<span class="fa fa-chevron-right" [hidden]="panels.panel1"></span>
+				<span class="fa fa-chevron-down" [hidden]="!panels.panel1"></span>
+			</div>
+			<div class="title">
+				First
+			</div>
+			<div class="link" (click)="onLinkClick($event)">
+				Click here
+			</div>
+		</div>
+		<div class="content" [hidden]="!panels.panel1">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non corporis et velit inventore dignissimos quos ducimus sed nam laudantium placeat, illo architecto aperiam porro mollitia asperiores? Excepturi commodi cum perspiciatis!</p>
+		</div>
+	</div>
+
+	<!-- Repeat other item -->
+	<div class="accordion-item">
+		<div class="heading" (click)="togglePanel('panel2')">
+			<div class="icon">
+				<span class="fa fa-chevron-right" [hidden]="panels.panel2"></span>
+				<span class="fa fa-chevron-down" [hidden]="!panels.panel2"></span>
+			</div>
+			<div class="title">
+				Second
+			</div>
+      <div class="link" (click)="onLinkClick($event)">
+				Click here 2
+			</div>
+		</div>
+		<div class="content" [hidden]="!panels.panel2">
+			<p>Ratione similique quibusdam nisi laboriosam pariatur eligendi a ullam saepe velit cupiditate veritatis aut nulla, voluptatum id non dolorem accusamus quos architecto debitis sed, corrupti cumque incidunt. Consequatur, numquam id.</p>
+		</div>
+	</div>
+
+  	<!-- Repeat other item -->
+	<div class="accordion-item">
+		<div class="heading" (click)="togglePanel('panel3')">
+			<div class="icon">
+				<span class="fa fa-chevron-right" [hidden]="panels.panel3"></span>
+				<span class="fa fa-chevron-down" [hidden]="!panels.panel3"></span>
+			</div>
+			<div class="title">
+				Third
+			</div>
+      <div class="link" (click)="onLinkClick($event)">
+				Click here 3
+			</div>
+		</div>
+		<div class="content" [hidden]="!panels.panel3">
+			<p>Distinctio error, nostrum deleniti mollitia corrupti eligendi praesentium. Praesentium laboriosam alias explicabo ullam neque rerum cum! Quae aliquid sapiente molestias maiores debitis est earum, rem, beatae quaerat recusandae expedita. Animi!</p>
+		</div>
+	</div>
+
+  <button class="btn" (click)="togglePanel('panel1')">Toggle first</button>
+<button class="btn" (click)="togglePanel('panel2')">Toggle second</button>
+
+</div>
+
+
+
+
